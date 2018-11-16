@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const hbs = require('express-handlebars');
 const app = express();
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 
 app.use(express.static("public"));
 app.engine('handlebars',hbs());
@@ -35,5 +35,7 @@ app.get("/boo", function(req,resp){
     boo+=1;
     console.log(boo);
 });
+
+fs.writeFileSync()
 
 app.listen(5500);
